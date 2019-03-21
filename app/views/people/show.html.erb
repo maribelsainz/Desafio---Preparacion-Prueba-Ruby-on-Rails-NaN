@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @person.position %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <% @assignations.each do |a| %>
+  <%= a.project.name %>
+  <% end %>
+
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
